@@ -1,0 +1,23 @@
+{
+    "version": "0.1.0",
+    "description": "Process supervisor that keeps copilot-api running as a background daemon on Windows",
+    "homepage": "https://github.com/jack-work/copilot-daemon",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jack-work/copilot-daemon/releases/download/v0.1.0/copilot-daemon.exe",
+            "hash": "5f15b50c3df75e77bd9ff883587a666449ec2ea6f6b8561588c9d2fc3de0113e"
+        }
+    },
+    "bin": "copilot-daemon.exe",
+    "depends": "nodejs",
+    "post_install": "Write-Host 'Run \"copilot-daemon install\" to register as a startup daemon.' -ForegroundColor Green",
+    "notes": [
+        "Prerequisites: npx copilot-api@latest auth  (authenticate with GitHub Copilot)",
+        "",
+        "Usage:",
+        "  copilot-daemon install    # register scheduled task + start",
+        "  copilot-daemon status     # check if running",
+        "  copilot-daemon uninstall  # remove scheduled task"
+    ]
+}

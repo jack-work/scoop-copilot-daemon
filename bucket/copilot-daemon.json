@@ -1,12 +1,12 @@
 {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Process supervisor that keeps copilot-api running as a background daemon on Windows",
     "homepage": "https://github.com/jack-work/copilot-daemon",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jack-work/copilot-daemon/releases/download/v0.1.0/copilot-daemon.exe",
-            "hash": "5f15b50c3df75e77bd9ff883587a666449ec2ea6f6b8561588c9d2fc3de0113e"
+            "url": "https://github.com/jack-work/copilot-daemon/releases/download/v0.2.0/copilot-daemon-v0.2.0-windows-amd64.zip",
+            "hash": "687ad4227c4ddeefd8a5978820410c37b6657fcc271a6541a4d7b929453eee58"
         }
     },
     "bin": "copilot-daemon.exe",
@@ -18,6 +18,8 @@
         "Usage:",
         "  copilot-daemon install    # register scheduled task + start",
         "  copilot-daemon status     # check if running",
-        "  copilot-daemon uninstall  # remove scheduled task"
+        "  copilot-daemon uninstall  # remove scheduled task",
+        "",
+        "Optional: place config.json next to the exe to configure port or do_not_kill_existing"
     ]
 }
